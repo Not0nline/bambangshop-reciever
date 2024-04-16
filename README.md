@@ -68,16 +68,16 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [X] Commit: `Implement list_all_as_string function in Notification repository.`
     -   [X] Write answers of your learning module's "Reflection Subscriber-1" questions in this README.
 -   **STAGE 3: Implement services and controllers**
-    -   [ ] Commit: `Create Notification service struct skeleton.`
-    -   [ ] Commit: `Implement subscribe function in Notification service.`
-    -   [ ] Commit: `Implement subscribe function in Notification controller.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification service.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Commit: `Implement receive_notification function in Notification service.`
-    -   [ ] Commit: `Implement receive function in Notification controller.`
-    -   [ ] Commit: `Implement list_messages function in Notification service.`
-    -   [ ] Commit: `Implement list function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
+    -   [X] Commit: `Create Notification service struct skeleton.`
+    -   [X] Commit: `Implement subscribe function in Notification service.`
+    -   [X] Commit: `Implement subscribe function in Notification controller.`
+    -   [X] Commit: `Implement unsubscribe function in Notification service.`
+    -   [X] Commit: `Implement unsubscribe function in Notification controller.`
+    -   [X] Commit: `Implement receive_notification function in Notification service.`
+    -   [X] Commit: `Implement receive function in Notification controller.`
+    -   [X] Commit: `Implement list_messages function in Notification service.`
+    -   [X] Commit: `Implement list function in Notification controller.`
+    -   [X] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -100,3 +100,23 @@ This is the place for you to write reflections:
 - Rust’s lazy_static is used to create a singleton variable, ensuring only one instance exists in the program. Rust’s static variables are immutable to guarantee thread safety during multi-threading, unlike Java’s mutable static variables. This immutability prevents data races and ensures that static variables have a 'static lifetime and are of type Sync, meaning they must be thread-safe.
 
 #### Reflection Subscriber-2
+
+1. Have you explored things outside of the steps in the tutorial, for example: src/lib.rs? If not, explain why you did not do so. If yes, explain things that you have learned from those other parts of code.
+<br>
+<br>
+
+- The src/lib.rs file is a central piece that contains essential information required by other parts of the application, such as error responses, root URLs, and the singleton pattern for app configuration. It also includes a custom Result type that simplifies error handling in Rust, which is a common pattern for managing errors more efficiently.
+
+
+2. Since you have completed the tutorial by now and have tried to test your notification system by spawning multiple instances of Receiver, explain how Observer pattern eases you to plug in more subscribers. How about spawning more than one instance of Main app, will it still be easy enough to add to the system?
+<br>
+<br>
+
+- The Observer pattern facilitates the addition of new subscribers by maintaining a list of observers, making it easy to add new ones interested in specific product types. When it comes to spawning more than one instance of the Main app, each instance operates its own set of observers, ensuring notifications are not shared across instances. However, if sharing notifications is desired, a shared data storage accessible by all instances would be necessary.
+
+
+3. Have you tried to make your own Tests, or enhance documentation on your Postman collection? If you have tried those features, tell us whether it is useful for your work (it can be your tutorial work or your Group Project).
+<br>
+<br>
+
+- While I have not created my own tests or enhanced the documentation for my Postman collection, I recognize the potential usefulness of these features. Testing and Postman collections can verify the correctness of a program and ensure it responds as expected using real application data. However, I have not utilized these features myself.
