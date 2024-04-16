@@ -82,3 +82,7 @@ pub fn receive_notification (payload: Notification) -> Result<Notification> {
         return Ok(subscriber_result);
     NotificationRepository::add(payload);
 }
+
+pub fn list_message()-> Result<Vec<String>>{
+    return Ok(NotificationRepository::list_all_as_string());
+}
