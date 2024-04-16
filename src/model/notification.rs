@@ -23,8 +23,8 @@ impl Display for Notification {
                    self.subscriber_name, self.product_type.to_lowercase(), self.product_title);
         } else {
             return write!(f,
-                          "Hello {}, let's try our {} product: {}, grab it out before the stock ran out! Check it out: {}",
-                          self.subscriber_name, self.product_type.to_lowercase(), self.product_title, self.product_url);
+                  "Hello {}, let's try our {} product: {}, grab it out before the stock ran out! Check it out: {}",
+                  self.subscriber_name, self.product_type.to_lowercase(), self.product_title, self.product_url);
         }
     }
 }
